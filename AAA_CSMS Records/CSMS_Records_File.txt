@@ -1,0 +1,99 @@
+u=User.create(
+  name: "Mohammad Shafqat Siddiqui",
+  fname: "Mohammad Shafqat Siddiqui",
+  mname: "Mohammad Shafqat Siddiqui",
+  address: "Kohefiza Bhopal M.P.",
+  number: "9770969714",
+  email: "shafqat@shafqat.com",
+  country: "India",
+  password: "1234",
+  password_confirmation: "1234",
+  dob: "07-08-1999",
+  role: "Technician",
+  nickname: "Shafqat",
+  admin: true)
+
+u=User.create(
+  name: "Clark Kent",
+  fname: "Clark Kent",
+  mname: "Clark Kent",
+  address: "London",
+  number: "1234567890",
+  email: "clark.kent@clark.com",
+  country: "London",
+  password: "1234",
+  password_confirmation: "1234",
+  dob: "02-04-1999",
+  role: "Technician",
+  nickname: "Clark")
+
+u=User.create(
+  name: "John Wick",
+  fname: "John Wick",
+  mname: "John Wick",
+  address: "New York",
+  number: "1234567890",
+  email: "john@john.com",
+  country: "New York",
+  password: "1234",
+  password_confirmation: "1234",
+  dob: "08-04-1999",
+  role: "Customer",
+  nickname: "John")
+
+u = User.create(
+  name: "Vidyut Dev Singh Jammwal",
+  fname: "Vidyut Dev Singh Jammwal",
+  mname: "Vidyut Dev Singh Jammwal",
+  address: "Mumbai",
+  number: "9874125630",
+  email: "vidyut@vidyut.com",
+  country: "India",
+  password: "1234",
+  password_confirmation: "1234",
+  dob: "10-12-1980",
+  role: "Customer",
+  nickname: "Vidyut")
+
+u=User.create(
+  name: "Tony Stark",
+  fname: "Haward Stak",
+  mname: "Tony Stark",
+  address: "Stark Tower New York",
+  number: "6352140987",
+  email: "tony@tony.com",
+  country: "New York",
+  password: "1234",
+  password_confirmation: "1234",
+  dob: "04-04-1999",
+  role: "Customer",
+  nickname: "Tony")
+
+u=User.create(
+  name: "Christopher Robert Evans",
+  fname: "Christopher Robert Evans",
+  mname: "Christopher Robert Evans",
+  address: "America",
+  number: "6540123987",
+  email: "chris@chris.com",
+  country: "America",
+  password: "1234",
+  password_confirmation: "1234",
+  dob: "13-06-1981",
+  role: "Customer",
+  nickname: "Chris")
+
+u=User.create(
+  name: "BPL",
+  fname: "BPL",
+  mname: "BPL",
+  address: "Bhopal",
+  number: "1023654789",
+  email: "bpl@bpl.com",
+  country: "India",
+  password: "1234",
+  password_confirmation: "1234",
+  dob: "10-02-1990",
+  role: "Customer",
+  nickname: "Bpl",
+  admin: true)

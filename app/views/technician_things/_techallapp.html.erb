@@ -1,0 +1,33 @@
+<table>
+    <td style="text-align: left;">You have <strong><i><%= @tuser.count %></i></strong> Appointments</td>
+    <td></td>
+    <td style="text-align: right;">
+        <%= link_to "Make New Appointment", new_appointment_path, class: "btn btn-primary" %>
+    </td>
+</table>
+<br>
+<table class="css-serial">
+    <thead>
+        <tr>
+            <th class="table_th">Sr No</th>
+            <th class="table_th">Customer Name</th>
+            <th class="table_th">Location</th>
+            <th class="table_th">Technician Name</th>
+            <th class="table_th">Appointment Date</th>
+            <th class="table_th">Action</th>
+    </thead>
+    <tbody>
+        <% @tuser.each do |tuser| %>
+            <tr>
+                <td class="table_td"></td>
+                <td class="table_td"><%= tuser.user.name %></td>
+                <td class="table_td"><%= tuser.location %></td>
+                <td class="table_td"><%= tuser.techname %></td>
+                <td class="table_td"><%= tuser.appdate.strftime("#{tuser.appdate.day.ordinalize} %B, %Y") %></td>
+                <td class="table_td">
+                    <%= link_to "Edit", edit_appointment_path(tuser), class: "btn btn-info" %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

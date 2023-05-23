@@ -1,0 +1,31 @@
+<h1>Editing Page of Appointment <%= @updateapp.id %></h1>
+
+<%= form_with(model: @updateapp, local: true) do |f| %>
+    <div class="row mb-3">
+        <%= f.label :user_id, "Customer Name", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-5">
+            <%= f.text_field :user_id, value: current_user.name, class: "form-control", readonly: true %>
+            <%= f.hidden_field :user_id, value: current_user.id %>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <%= f.label :appdate, "Appointment Date", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-5">
+            <%= f.date_field :appdate, min: Date.today, autofocus: true, class: "form-control" %>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <%= f.label :location, "Service Location", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-5">
+            <%= f.text_field :location, placeholder: "Service Location", class: "form-control" %>
+        </div>
+    </div>
+    <div class="row mb-3">  
+        <%= f.label :techname, "Technician Name", class: "col-sm-2 col-form-label" %>
+        <div class="col-sm-5">
+            <%= f.collection_select(:techname, User.where(role: "Technician"), :name, :name, { prompt: true }, { class: "form-select form-select-lg mb-3" } ) %>
+        </div>
+    </div>
+    <br>
+    <%= f.submit class: "btn btn-outline-primary" %>
+<% end %>

@@ -1,0 +1,93 @@
+<%= form_with(model: user, local: true) do |f| %>
+
+  <div class="row mb-3">
+    <%= f.label :name, "Full Name", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :name, placeholder: "Full Name", autofocus: true, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :fname, "Fathers Name", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :fname, placeholder: "Fathers Name", class: "form-control" %>
+      </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :mname, "Mothers Name", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :mname, placeholder: "Mothers Name", class: "form-control" %>
+      </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :address, "Full Address", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :address, placeholder: "Full Address", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :number, "Contact", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.number_field :number, placeholder: "Contact", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :email, "Email ID", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.email_field :email, placeholder: "Email ID", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :country, "Country", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.text_field :country, placeholder: "Country", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :password, "Password", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :password_confirmation, "Confirm Password", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">    
+    <%= f.label :dob, placeholder: "Date of Birth", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.date_field :dob, {class: "date"} %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :role, "User Role", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.select :role, User::USEROLE, prompt: "User Role" %>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <%= f.label :main_image, "Select You Image", class: "col-sm-2 col-form-label" %>
+    <div class="col-sm-5">
+      <%= f.file_field :main_image %>
+    </div>
+  </div>
+
+  <% if @user.new_record? %>
+    <%= f.submit method: :create, class: "btn btn-primary" %>
+  <% else %>
+    <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+
+<% end %>

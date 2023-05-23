@@ -1,0 +1,28 @@
+<table>
+    <td style="text-align: left;">Currently you have <strong><i><%= @techupcomingapp.count %></i></strong> Upcoming Appointments</td>
+    <td></td>
+</table>
+<br>
+<table class="css-serial">
+    <thead>
+        <tr>
+            <th class="table_th">Sr No</th>
+            <th class="table_th">Customer Name</th>
+            <th class="table_th">Location</th>
+            <th class="table_th">Appointment Date</th>
+            <th class="table_th">Action</th>
+    </thead>
+    <tbody>
+        <% @techupcomingapp.each do |tua| %>
+            <tr>
+                <td class="table_td"></td>
+                <td class="table_td"><%= tua.user.name %></td>
+                <td class="table_td"><%= tua.location %></td>
+                <td class="table_td"><%= tua.appdate %></td>
+                <td class="table_td">
+                    <%= link_to "Edit", edit_appointment_path(tua), class: "btn btn-info" %>
+                </td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

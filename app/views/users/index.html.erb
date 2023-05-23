@@ -1,0 +1,25 @@
+<% if current_user_admin? %>
+    <h1>This is Admins Index Page</h1>
+    <h1>Currently we have
+        <%= @users.count %> Users</h1>
+    <br>
+    <%= render 'admin_things/collapse' %>
+
+<% elsif current_user_technician? %>
+    <h1>This is Technician Content <i><u><%= current_user.name %></u></i></h1>
+    <hr>
+    <%#= render 'technician_things/techupcomingappfirst' %>
+    <hr>
+    <%= render 'technician_things/collapse' %>
+
+<% elsif current_user_customer? %>
+    <h1>This is Customer Content <i><u><%= current_user.name %></u></i></h1>
+    <hr>
+    <%= render 'customer_things/customerupcomingappfirst' %>
+    <hr>
+    <%= render 'customer_things/collapse' %>
+
+<% else %>
+    <h1>This is Users Index Page</h1>
+    <h3>You don't have full Authorizations</h3>
+<% end %>

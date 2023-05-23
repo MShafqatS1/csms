@@ -1,0 +1,22 @@
+<h1>Sing Up</h1>
+<div class="container">
+    <%= form_with(url: session_path, local: true) do |f| %>
+
+        <div class="mb-3 row">
+            <%= f.label :email, "Email ID", class: "col-sm-2 col-form-label" %>
+            <div class="col-sm-5">
+                <%= f.email_field :email, placeholder: "Enter your Email ID", autofocus: true, class: "form-control" %>
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <%= f.label :password, "Passsword", class: "col-sm-2 col-form-label" %>
+            <div class="col-sm-5">
+                <%= f.password_field :password, placeholder: "Enter your Password", class: "form-control" %>
+            </div>
+        </div>
+
+        <%= f.submit "Log In", class: "btn btn-outline-primary" %>
+
+    <% end %>
+</div>

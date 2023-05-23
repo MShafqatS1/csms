@@ -1,0 +1,55 @@
+/*Top Navbar CSS Rules*/
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+
+/* Main Home Page div style */
+
+.div-center-position {
+    margin: auto;
+    width: 100%;
+    border: 1px solid #c51b1b;
+    padding: 10px;
+}
+
+
+/* Table transparent border */
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.table_th,
+.table_td {
+    border: 1.5px;
+    border-style: solid;
+    border-color: #96D4D4;
+}
+
+
+/* Automatic Increment Serial Numbers for Tables */
+
+.css-serial {
+    counter-reset: serial-number;
+    /* Set the serial number counter to 0 */
+}
+
+.css-serial td:first-child:before {
+    counter-increment: serial-number;
+    /* Increment the serial number counter */
+    content: counter(serial-number);
+    /* Display the counter */
+}
+
+.user-image-size {
+    width: 150px;
+}

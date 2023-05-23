@@ -1,0 +1,16 @@
+<!--
+<%# if flash %>
+    <div class="alert alert-info">
+        <%#= flash[:notice] %>
+    </div>
+<%# end %>
+-->
+
+
+<div class="container" style="text-align:center;">
+  <% flash.each do |type, msg| %>
+    <div class="alert <%= bootstrap_class_for_flash(type) %> alert-dismissable fade show">
+      <%= msg %>
+    </div>
+  <% end %> 
+</div>

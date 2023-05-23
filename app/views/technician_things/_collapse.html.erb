@@ -1,0 +1,38 @@
+<div id="accordion">
+    <div class="card">
+        <div class="card-header">
+        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+            +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upcoming Appointments
+        </a>
+        </div>
+        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+        <div class="card-body">
+            <%= render 'technician_things/techupcomingapp' %>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+            +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Past Appointments
+        </a>
+        </div>
+        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+            <%= render 'technician_things/techpastapp' %>
+        </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+            +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All Your Appointments
+        </a>
+        </div>
+        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+            <%= render 'technician_things/techallapp' %>
+        </div>
+        </div>
+    </div>
+</div>
